@@ -1,4 +1,4 @@
-# RAG---Retrieval_augmented_generation
+# Retrieval_augmented_generation
 # 📄 Mistral RAG Chatbot with Streamlit UI
 
 A Retrieval-Augmented Generation (RAG) chatbot built using **Mistral AI** for both embeddings and LLM, powered by a clean **Streamlit UI**. Users can upload one or more PDF documents and ask context-aware questions directly from the content.
