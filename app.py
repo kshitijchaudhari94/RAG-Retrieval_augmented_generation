@@ -19,9 +19,9 @@ if not api_key:
     st.error("❌ MISTRAL_API_KEY not found. Please add it to your .env file.")
     st.stop()
 
-# --------------------------------------------
+
 # Step 1: Extract and Chunk PDF Text
-# --------------------------------------------
+
 
 def get_pdf_text(pdf_docs):
     text = ""
@@ -36,18 +36,14 @@ def get_text_chunks(text):
     splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=20)
     return splitter.split_text(text)
 
-# --------------------------------------------
 # Step 2: Vector Embedding and FAISS Index
-# --------------------------------------------
 
 def get_vector_store(text_chunks):
     embeddings = MistralAIEmbeddings(model="mistral-embed", mistral_api_key=api_key)
     vector_store = FAISS.from_texts(text_chunks, embedding=embeddings)
     return vector_store
 
-# --------------------------------------------
 # Step 3: RAG Chain (Prompt + Memory + Retriever)
-# --------------------------------------------
 
 def get_conversational_chain(vector_store):
     model = ChatMistralAI(mistral_api_key=api_key)
@@ -70,9 +66,7 @@ def get_conversational_chain(vector_store):
         combine_docs_chain_kwargs={"prompt": prompt}
     )
 
-# --------------------------------------------
 # Step 4: Streamlit UI
-# --------------------------------------------
 
 def handle_user_input(user_question):
     response = st.session_state.conversation({"question": user_question})
