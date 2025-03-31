@@ -4,6 +4,10 @@
 A Retrieval-Augmented Generation (RAG) chatbot built using **Mistral AI** for both embeddings and LLM, powered by a clean **Streamlit UI**. Users can upload one or more PDF documents and ask context-aware questions directly from the content.
 
 ---
+✅ To Run
+Follow the steps below : In vscode terminal run the following
+1. pip install -r requirements.txt
+2. streamlit run app.py
 
 ## 🚀 Features
 
