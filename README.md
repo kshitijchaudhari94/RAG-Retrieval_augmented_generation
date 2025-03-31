@@ -19,5 +19,5 @@ A Retrieval-Augmented Generation (RAG) chatbot built using **Mistral AI** for bo
 
 ## 📸 Screenshot
 
-![RAG Chatbot UI](https://via.placeholder.com/800x400.png?text=Streamlit+Chatbot+UI+Preview)
+![RAG Chatbot UI](https://github.com/kshitijchaudhari94/RAG-Retrieval_augmented_generation/blob/0e4b2e2d48a5ddd46bdb654224cec18910ff8fa9/Sample_QnA_Image.jpg)
 
